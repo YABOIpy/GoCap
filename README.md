@@ -14,15 +14,6 @@
    API Wrapper for Capmonster for Golang
 </p>
 
-<div align="center">
-<strong>
-<samp>
-
-[English](README.md) · [Deutsch](README.ge.md) · [Français](README.fr.md) 
-
-</samp>
-</strong>
-</div>
 
 ## Contents
 
