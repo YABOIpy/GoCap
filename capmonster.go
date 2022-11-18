@@ -82,5 +82,8 @@ func (x *capresp) Solve(apikey string) interface{} {
 	return cap.Captcha
 }
 	
-
+func GoCap() structs {
+	x := structs{}
+	return x
+}
 
