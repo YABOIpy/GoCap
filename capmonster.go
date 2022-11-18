@@ -33,6 +33,7 @@ func (x *structs) GetTaskID(APIKey string) int {
 	err = json.Unmarshal(body, &data)
 	call_err(err, false)
 
+	
 
 	if resp.StatusCode == 200 {
 		cap.TaskID = data.TaskID
@@ -50,12 +51,12 @@ func (x *structs) SetPayload(Key string, Url string, Agent string) error {
 }
 
 
-func (x *capresp) Solve(apikey string) interface{} {
+func (x *structs) Solve(apikey string, task int) interface{} {
+	cap := capresp{}
 	xpayload := map[string]interface{}{
 		"clientKey": apikey,
-		"taskId": x.TaskID,
+		"taskId": task,
 	}
-	cap := capresp{}
 	xpy,_ := json.Marshal(xpayload)
 	for true {
 		req, err := http.NewRequest("POST", "https://api.capmonster.cloud/getTaskResult", bytes.NewBuffer(xpy))
