@@ -61,6 +61,8 @@ func main() {
       url = "discord.com" // site domain
       Key = "4c672d35-0701-42b2-88c3-78380b0db560" //site key
       Agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) " //useragent
+      
+      gocap := gocap.GoCap()
     )
     err := gocap.SetPayload(Key, Url, Agent)
     if err != nil {
@@ -83,6 +85,7 @@ import (
 )
 
 func main() {
+    gocap := gocap.GoCap()
     apikey := "jkeargh98w4hq365tyq25h3h" // Capmonster API Key
     TaskID := gocap.GetTaskID(apikey)
     print("Task ID: ", task)
@@ -107,7 +110,10 @@ func main() {
       Key = "4c672d35-0701-42b2-88c3-78380b0db560" //site key
       apikey = "jkeargh98w4hq365tyq25h3h" // Capmonster API Key
       Agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) " //useragent
+      
+      gocap := gocap.GoCap()
     )
+    
     err := gocap.SetPayload(Key, Url, Agent)
     if err != nil {
         log.Fatal(err)
