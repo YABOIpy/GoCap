@@ -122,6 +122,6 @@ func main() {
     
     TaskID := gocap.GetTaskID(apikey)
     Solved := gocap.Solve(apikey, TaskID)
-    print("Solved Captcha String: ", Sovled)
+    print("Solved Captcha String: ", Solved)
 }
 ```
