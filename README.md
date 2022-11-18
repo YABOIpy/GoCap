@@ -85,6 +85,7 @@ import (
 )
 
 func main() {
+     // make sure to set payload before running the functions!!!
     gocap := gocap.GoCap()
     apikey := "jkeargh98w4hq365tyq25h3h" // Capmonster API Key
     TaskID := gocap.GetTaskID(apikey)
