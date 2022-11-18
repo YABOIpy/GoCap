@@ -9,7 +9,7 @@ import (
 type capresp struct {
 	Captcha     interface{}
 	solution    interface{}
-	TaskID		interface{}
+	TaskID	    int `json:"taskId"`
 }
 
 type structs struct {
