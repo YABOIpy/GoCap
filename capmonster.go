@@ -29,13 +29,13 @@ func (x *structs) GetTaskID(APIKey string) interface{} {
 	
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
-	var data map[string]interface{}
+	var data capresp
 	err = json.Unmarshal(body, &data)
 	call_err(err, false)
 
 
 	if resp.StatusCode == 200 {
-		cap.TaskID = data["taskId"]
+		cap.TaskID = data.TaskID
 	}
 	return cap.TaskID
 }
