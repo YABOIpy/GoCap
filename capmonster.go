@@ -11,7 +11,7 @@ import (
 
 
 
-func (x *structs) GetTaskID(APIKey string) interface{} {
+func (x *structs) GetTaskID(APIKey string) int {
 	payload := map[string]interface{}{
         "clientKey": APIKey,
         "task": map[string]interface{}{
